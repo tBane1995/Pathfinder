@@ -98,8 +98,13 @@ class Map:
         cameFrom[start] = None
         costSoFar[start] = 0
 
+        timer_start = time.time()
+
         while openSet:
             _, current = heapq.heappop(openSet)
+
+            if time.time() - timer_start > 0.1:
+                return []
 
             if current == goal:
                 path = []
