@@ -150,14 +150,14 @@ class Map:
 def main():
 
     WINDOW_COLOR = sdl2.ext.Color(48,48,48)
-    WINDOW_SIZE = (600,480)
+    WINDOW_SIZE = (800,600)
 
     tile_size = 8
     width = int(WINDOW_SIZE[0] / tile_size)
     height = int(WINDOW_SIZE[1] / tile_size)
 
     sdl2.ext.init()
-    window = sdl2.ext.Window("Island Generator", WINDOW_SIZE)
+    window = sdl2.ext.Window("Pathfinder", WINDOW_SIZE)
     window.show()
     renderer = sdl2.ext.Renderer(window)
 
